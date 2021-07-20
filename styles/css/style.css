@@ -18,6 +18,11 @@ a {
   color: inherit;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #7d1b1b;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -32,6 +37,17 @@ a {
 }
 
 .container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -40,11 +56,31 @@ a {
   background-color: #333333;
 }
 
-.container .header .photo {
-  float: left;
+@media (min-width: 768px) {
+  .container .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: left;
+  }
+}
+
+.container .header-photo {
   display: block;
-  margin-right: 30px;
-  width: 20%;
+  margin-bottom: 10px;
+  width: 25%;
+}
+
+@media (min-width: 768px) {
+  .container .header-photo {
+    width: 20%;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }
 
 .container .header-title {
@@ -63,15 +99,36 @@ a {
   padding: 15px 0;
 }
 
-.container .main .data-section .data-section-title {
+.container .main .data-section-title {
   padding-bottom: 10px;
 }
 
-.container .main .data-section .skills-content-list,
+.container .main .data-section .education {
+  padding-bottom: 10px;
+}
+
 .container .main .data-section .certificates-geekbrains-list,
 .container .main .data-section .projects-list,
 .container .main .data-section .education-list {
   padding-left: 35px;
+}
+
+.container .main .skills-content-list li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 180px 1fr;
+      grid-template-columns: 180px 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.container .main .skills-content-list li b,
+.container .main .skills-content-list li span {
+  display: block;
+}
+
+.container .main .skills-content-list li b {
+  text-align: right;
 }
 
 .container footer {
