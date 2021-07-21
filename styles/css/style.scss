@@ -74,9 +74,20 @@
         font-size: 16px;
         line-height: 1.5;
         background-color: #f5f5f5;
+        & > :not(:last-child) {
+          border-bottom: 1px solid #1b7d23;
+        }
+        
+        h3 {
+          color: #1b7d23;
+          // text-decoration: underline dotted;
+        }
 
       .data-section {
         padding: 15px 0;
+
+        
+        
 
         &-title {
           padding-bottom: 10px;
@@ -88,7 +99,8 @@
 
         .certificates-geekbrains-list,
         .projects-list,
-        .education-list {
+        .education-list,
+        .experience-list {
             padding-left: 35px;
           }
         }
