@@ -120,6 +120,7 @@ a:hover {
 .container .main .data-section .education-list,
 .container .main .data-section .experience-list {
   padding-left: 35px;
+  text-align: justify;
 }
 
 .container .main .skills-content-list li {
