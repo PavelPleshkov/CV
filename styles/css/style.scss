@@ -118,9 +118,10 @@
         }
       }
 
-    footer {
+    .footer {
         padding: 20px;
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
         background-color: #d3d3d3;
       }
   }
