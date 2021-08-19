@@ -3,128 +3,125 @@
     padding: 0;
   }
   
-  html,
-  body {
-    height: 100%;
-  }
-  
-  body {
-    font-style: normal;
-    font-family: "Arial", sans-serif;
-    background-image: url("../../images/stars.png");
-  }
-  
-  a {
-    color: inherit;
+html,
+body {
+  height: 100%;
+}
 
-    &:hover {
-      text-decoration:none;
-      color: #7d1b1b;
+body {
+  font-style: normal;
+  font-family: "Arial", sans-serif;
+  background-image: url("../../images/stars.png");
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration:none;
+    color: #7d1b1b;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: #f8f8f8;
+    background-color: #333333;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-end;
+      text-align: left;
     }
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto;
-    max-width: 1024px;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #f5f5f5;
 
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    &-photo {
+      // float: left;
+      display: block;
+      margin-bottom: 10px;
+      width: 25%;
+
+    @media (min-width: 768px) {
+      width: 20%;
+      margin-bottom: 0;
+      margin-right: 30px;
+      }
+    }
+        
+    &-title {
+          margin-bottom: 10px;
+          font-size: 30px;
+        }
+    }
+
+  .main {
       padding: 20px;
-      box-sizing: border-box;
+      font-size: 16px;
       line-height: 1.5;
-      color: #f8f8f8;
-      background-color: #333333;
-
-      @media (min-width: 768px) {
-        flex-direction: row;
-        align-items: flex-end;
-        text-align: left;
+      background-color: #f5f5f5;
+      & > :not(:last-child) {
+        border-bottom: 1px solid #1b7d23;
+      }
+      
+      h3 {
+        color: #1b7d23;
       }
 
-      &-photo {
-        // float: left;
-        display: block;
-        margin-bottom: 10px;
-        width: 25%;
+    .data-section {
+      padding: 15px 0;
 
-      @media (min-width: 768px) {
-        width: 20%;
-        margin-bottom: 0;
-        margin-right: 30px;
-        }
-      }
-          
       &-title {
-            margin-bottom: 10px;
-            font-size: 30px;
-          }
+        padding-bottom: 10px;
+      }
+      
+      .education {
+        padding-bottom: 10px;
       }
 
-    .main {
-        padding: 20px;
-        font-size: 16px;
-        line-height: 1.5;
-        background-color: #f5f5f5;
-        & > :not(:last-child) {
-          border-bottom: 1px solid #1b7d23;
-        }
-        
-        h3 {
-          color: #1b7d23;
-        }
-
-      .data-section {
-        padding: 15px 0;
-
-        &-title {
-          padding-bottom: 10px;
-        }
-        
-        .education {
-          padding-bottom: 10px;
-        }
-
-        .certificates-geekbrains-list,
-        .projects-list,
-        .education-list,
-        .experience-list {
-            padding-left: 35px;
-            text-align: justify;
-          }
-        }
-
-        .skills-content-list li {
-          display: grid;
-          grid-template-columns: 180px 1fr;
-          column-gap: 20px;
-
-          b,
-          span {
-            display: block;
-            
-          }
-
-          b {
-            text-align: right;
-          }
+      .certificates-geekbrains-list,
+      .projects-list,
+      .education-list,
+      .experience-list {
+          padding-left: 35px;
+          text-align: justify;
         }
       }
 
-    .footer {
-        padding: 20px;
-        display: flex;
-        justify-content: flex-end;
-        background-color: #d3d3d3;
-      }
-  }
-  
+      .skills-content-list li {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        column-gap: 20px;
 
-  
+        b,
+        span {
+          display: block;
+          
+        }
+
+        b {
+          text-align: right;
+        }
+      }
+    }
+
+  .footer {
+      padding: 20px;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #d3d3d3;
+    }
+}
