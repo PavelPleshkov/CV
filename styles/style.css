@@ -11,7 +11,7 @@ body {
 body {
   font-style: normal;
   font-family: "Arial", sans-serif;
-  background-image: url("../../images/stars.png");
+  background-image: url("../images/stars.png");
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #7d1b1b;
+  color: #0094ff;
 }
 
 .container {
@@ -111,7 +111,26 @@ a:hover {
   padding-bottom: 10px;
 }
 
-.container .main .data-section .education {
+.container .main .data-section .contact-link-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .main .data-section .contact-link:hover .contact-link-icon {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: drop-shadow(0 0 3px #0094ff);
+          filter: drop-shadow(0 0 3px #0094ff);
+  color: #ffffff;
+}
+
+.container .main .data-section .education:not(:last-child) {
   padding-bottom: 10px;
 }
 
@@ -119,17 +138,33 @@ a:hover {
 .container .main .data-section .projects-list,
 .container .main .data-section .education-list,
 .container .main .data-section .experience-list {
-  padding-left: 35px;
+  padding-left: 20px;
   text-align: justify;
+}
+
+@media (min-width: 576px) {
+  .container .main .data-section .certificates-geekbrains-list,
+  .container .main .data-section .projects-list,
+  .container .main .data-section .education-list,
+  .container .main .data-section .experience-list {
+    padding-left: 35px;
+  }
 }
 
 .container .main .skills-content-list li {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 180px 1fr;
-      grid-template-columns: 180px 1fr;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .container .main .skills-content-list li {
+    -ms-grid-columns: 180px 1fr;
+        grid-template-columns: 180px 1fr;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
 }
 
 .container .main .skills-content-list li b,
@@ -138,7 +173,23 @@ a:hover {
 }
 
 .container .main .skills-content-list li b {
-  text-align: right;
+  text-align: left;
+}
+
+@media (min-width: 576px) {
+  .container .main .skills-content-list li b {
+    text-align: right;
+  }
+}
+
+.container .main .skills-content-list li span {
+  padding-left: 20px;
+}
+
+@media (min-width: 576px) {
+  .container .main .skills-content-list li span {
+    padding-left: 0;
+  }
 }
 
 .container .footer {

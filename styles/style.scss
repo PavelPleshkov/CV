@@ -11,7 +11,7 @@ body {
 body {
   font-style: normal;
   font-family: "Arial", sans-serif;
-  background-image: url("../../images/stars.png");
+  background-image: url("../images/stars.png");
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 
   &:hover {
     text-decoration:none;
-    color: #7d1b1b;
+    color: #0094ff;
   }
 }
 
@@ -88,7 +88,51 @@ a {
         padding-bottom: 10px;
       }
       
-      .education {
+      .contact {
+
+        // &-info-content {
+        //   p {
+        //     display: flex;
+        //     align-items: center;
+        //   }
+        // }
+
+        &-link {
+          // vertical-align: middle;
+          // // display: block;
+          // display: flex;
+          
+
+          &-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            font-size: 20px;
+            text-align: center;
+            transition: 0.3s;
+            // text-decoration: none;
+            // border: 1px solid transparent;
+            // box-sizing: border-box;
+          }
+
+          &:hover {
+
+            .contact-link-icon {
+              // transform: scale(1.2) rotateY(1turn);
+              transform: scale(1.2);
+              filter: drop-shadow(0 0 3px #0094ff);
+              color: #ffffff;
+              // margin-right: 5px;
+              // border: 1px solid #000;
+              // border-radius: 50%;
+              // transform: rotateY(1turn);
+            }
+          }
+        }
+      }
+
+      .education:not(:last-child) {
         padding-bottom: 10px;
       }
 
@@ -96,24 +140,44 @@ a {
       .projects-list,
       .education-list,
       .experience-list {
-          padding-left: 35px;
+          padding-left: 20px;
           text-align: justify;
+
+          @media (min-width: 576px) {
+            padding-left: 35px;
+          }
         }
       }
 
       .skills-content-list li {
         display: grid;
-        grid-template-columns: 180px 1fr;
-        column-gap: 20px;
+        grid-template-columns: 1fr;
+        // column-gap: 20px;
+
+        @media (min-width: 576px) {
+          grid-template-columns: 180px 1fr;
+          column-gap: 20px;
+        }
 
         b,
         span {
           display: block;
-          
         }
 
         b {
-          text-align: right;
+          text-align: left;
+
+          @media (min-width: 576px) {
+            text-align: right;
+          }
+        }
+
+        span {
+          padding-left: 20px;
+
+          @media (min-width: 576px) {
+          padding-left: 0;
+          }
         }
       }
     }
