@@ -71,8 +71,21 @@ a:hover {
 
 .container .header-photo {
   display: block;
+  border-radius: 5px;
   margin-bottom: 10px;
-  width: 25%;
+  width: 50%;
+}
+
+@media (min-width: 440px) {
+  .container .header-photo {
+    width: 40%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container .header-photo {
+    width: 30%;
+  }
 }
 
 @media (min-width: 768px) {
