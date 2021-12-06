@@ -56,6 +56,22 @@ a:hover {
   background-color: #333333;
 }
 
+@media print {
+  .container .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    text-align: left;
+  }
+}
+
 @media (min-width: 768px) {
   .container .header {
     -webkit-box-orient: horizontal;
@@ -74,6 +90,13 @@ a:hover {
   border-radius: 5px;
   margin-bottom: 10px;
   width: 50%;
+}
+
+@media print {
+  .container .header-photo {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }
 
 @media (min-width: 440px) {
