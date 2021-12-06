@@ -32,6 +32,10 @@ a {
   margin: 0 auto;
   background-color: #f5f5f5;
 
+  // @media print {
+  //   width: 80%;
+  // }
+
   .header {
     display: flex;
     flex-direction: column;
@@ -42,6 +46,16 @@ a {
     line-height: 1.5;
     color: #f8f8f8;
     background-color: #333333;
+
+    @media print {
+      // display: grid;
+      // grid-template-columns: 1fr 3fr;
+      // grid-template-rows: 200px;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: left;
+      text-align: left;
+    }
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -55,6 +69,15 @@ a {
       border-radius: 5px;
       margin-bottom: 10px;
       width: 50%;
+
+      @media print {
+        // width: 100%;
+        // width: 10%;
+        // height: 100%;
+        // width: 200px;
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
 
       @media (min-width: 440px) {
         width: 40%;
