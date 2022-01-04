@@ -163,6 +163,12 @@ a:hover {
   padding: 15px 0;
 }
 
+@media print {
+  .container .main .data-section {
+    padding: 10px 0;
+  }
+}
+
 .container .main .data-section-title {
   padding-bottom: 10px;
 }
@@ -252,12 +258,6 @@ a:hover {
   margin-right: 5px;
 }
 
-@media print {
-  .container .main .skills-content-list li .skills-content-list-items div {
-    display: block;
-  }
-}
-
 .container .footer {
   padding: 20px;
   display: -webkit-box;
@@ -267,5 +267,11 @@ a:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: #d3d3d3;
+}
+
+@media print {
+  .container .footer {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

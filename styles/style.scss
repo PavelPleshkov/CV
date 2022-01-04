@@ -163,6 +163,10 @@ a {
     .data-section {
       padding: 15px 0;
 
+      @media print {
+        padding: 10px 0;
+      }
+
       &-title {
         padding-bottom: 10px;
       }
@@ -256,16 +260,16 @@ a {
           padding-left: 20px;
 
           @media (min-width: 576px) {
-          padding-left: 0;
+            padding-left: 0;
           }
 
           div {
             display: inline-block;
             margin-right: 5px;
 
-            @media print {
-              display: block;
-            }
+            // @media print {
+            //   display: block;
+            // }
           }
         }
       }
@@ -276,5 +280,9 @@ a {
       display: flex;
       justify-content: flex-end;
       background-color: #d3d3d3;
-    }
+
+      @media print {
+        display: none;
+      }
+  }
 }
