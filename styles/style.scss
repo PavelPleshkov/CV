@@ -57,8 +57,10 @@ a {
       text-align: left;
       // background-color: #d5ecca;
       // background-color: #e7e7e7;
-      // background-color: #fffff3;
+      background-color: #3333330f;
       text-transform: uppercase;
+      color: inherit;
+      // background-color: transparent;
       // box-shadow: inset 0 0 15px #333333;
       // box-shadow: inset 0 0 15px #7b7d1b;
     }
@@ -116,6 +118,7 @@ a {
           @media print {
             // width: 80%;
             // text-shadow: 0 0 15px #333333;
+
           }
 
           span {
@@ -137,6 +140,7 @@ a {
 
             @media print {
               // color: #333333;
+              color: #115317;
             }
           }
         }
@@ -173,12 +177,14 @@ a {
       
       .contact {
 
-        // &-info-content {
-        //   p {
-        //     display: flex;
-        //     align-items: center;
-        //   }
-        // }
+        &-info-content {
+            @media print {
+              display: grid;
+              // justify-items: center;
+              // grid-template-columns: repeat(2, 1fr);
+
+            }
+        }
 
         &-link {
           // vertical-align: middle;

@@ -66,7 +66,9 @@ a:hover {
         -ms-flex-align: end;
             align-items: flex-end;
     text-align: left;
+    background-color: #3333330f;
     text-transform: uppercase;
+    color: inherit;
   }
 }
 
@@ -140,6 +142,12 @@ a:hover {
   font-weight: 600;
 }
 
+@media print {
+  .container .header-title-position {
+    color: #115317;
+  }
+}
+
 .container .main {
   padding: 0 20px 20px;
   font-size: 16px;
@@ -171,6 +179,13 @@ a:hover {
 
 .container .main .data-section-title {
   padding-bottom: 10px;
+}
+
+@media print {
+  .container .main .data-section .contact-info-content {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 .container .main .data-section .contact-link-icon {
